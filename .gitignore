@@ -1,0 +1,4 @@
+_site/
+node_modules/
+_lilypond/*.ly
+_lilycode/*.ly

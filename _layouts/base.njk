@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/favicon.svg">
+  <link rel="mask-icon" href="/images/favicon.svg" color="#000000">
+  <!-- Grab title from the page data and dump it here -->
+  <title>{% if title == "Frazier Web Dev" %}{{ title }}{% else %}{{ title }} | Frazier Web Dev {% endif %}</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/lilypond.css">
+  <script src="/js/toggle.js" type="text/javascript"></script>
+</head>
+<body>
+  {% if title != "Frazier Web Dev" %}
+  <div class="top-bar">
+    <nav>
+      <a class="icon-nav" href="/" title="">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-left"><polyline points="9 10 4 15 9 20"></polyline><path d="M20 4v7a4 4 0 0 1-4 4H4"></path></svg>
+      Back to home
+      </a>
+    </nav>
+  </div>
+  {% endif %}
+  <!-- Grab the content from the page data and dump it here, and mark it as safe -->
+  <!-- Safe docs: https://mozilla.github.io/nunjucks/templating.html#safe -->
+  <main {% if width %}style="max-width: {{ width }};"{% endif %}>
+    {{ content | safe }}
+  </main>
+
+  <footer>
+    <div>
+      <a href="/privacy">
+        Privacy
+      </a>
+    </div>
+    <div>
+      <a class="icon-nav" href="/contact" title="Contact Me">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail" ><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+        Contact Me
+      </a>
+      <a class="icon-nav" href="/payment" title="Pay Me">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-dollar-sign"><circle cx="12" cy="12" r="10"></circle><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path><path d="M12 18V6"></path></svg>
+        Pay Me
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
