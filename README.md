@@ -1,5 +1,3 @@
-# Frazier Piano Studio website
+# Frazier Web Dev
 
-I'm redoing my website to easier find content and add courses and such.
-
-I'm using 11ty and using the 11ty base blog example as an inspiration.
+This is my business page for building business websites and business tools.
